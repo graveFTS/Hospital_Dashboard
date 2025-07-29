@@ -54,14 +54,11 @@ const Dashboard = () => {
       <section className="dashboard page">
         <div className="banner">
           <div className="firstBox">
-            <img src="/doc.png" alt="docImg" />
+            <img src="doc.png" alt="docImg" />
             <div className="content">
               <div>
                 <p>Hello ,</p>
-                <h5>
-                  {admin &&
-                    `${admin.firstName} ${admin.lastName}`}{" "}
-                </h5>
+                <h5>{admin && `${admin.firstName} ${admin.lastName}`} </h5>
               </div>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -125,7 +122,13 @@ const Dashboard = () => {
                           </option>
                         </select>
                       </td>
-                      <td>{appointment.hasVisited === true ? <GoCheckCircleFill className="green"/> : <AiFillCloseCircle className="red"/>}</td>
+                      <td>
+                        {appointment.hasVisited === true ? (
+                          <GoCheckCircleFill className="green" />
+                        ) : (
+                          <AiFillCloseCircle className="red" />
+                        )}
+                      </td>
                     </tr>
                   ))
                 : "No Appointments Found!"}
