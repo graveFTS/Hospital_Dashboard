@@ -37,7 +37,7 @@ const App = () => {
   }, [isAuthenticated]);
 
   return (
-    <Router>
+    <Router basename="/Hospital_Dashboard/">
       <Sidebar />
       <Routes>
         <Route path="/" element={<Dashboard />} />
